@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "styled-components";
+import { DarkThemeState } from "./atoms";
+import { darkTheme, lightTheme, GlobalStyles } from "./styles";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useRecoilValue } from "recoil";
+import routes from "./routes";
+import Layout from "./component/Common/Layout";
+import Home from "./screen/Home";
 
 function App() {
+  const isDark = useRecoilValue(DarkThemeState);
+  console.log(isDark);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+      <GlobalStyles />
+      <Router>
+        <Switch>
+          <Route path={routes.home} exact>
+            <Layout>
+              <Home />
+            </Layout>
+          </Route>
+        </Switch>
+      </Router>
+    </ThemeProvider>
   );
 }
 
