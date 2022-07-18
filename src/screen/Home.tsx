@@ -1,8 +1,16 @@
+import styled from "styled-components";
+import Main from "../component/Home/Main";
+
+const HomeLayout = styled.div`
+  margin: 0 auto;
+  width: 100%;
+`;
+
 function Home() {
   return (
-    <div>
-      <span>Helllo</span>
-    </div>
+    <HomeLayout>
+      <Main />
+    </HomeLayout>
   );
 }
 export default Home;
