@@ -8,6 +8,7 @@ export const lightTheme: DefaultTheme = {
   fontColor: "rgb(38, 38, 38)",
   bgDarkColor: "rgba(0, 0, 0, 0.3)",
   borderColor: "rgb(219, 219, 219)",
+  btnColor: "#00fefe",
 };
 
 export const darkTheme: DefaultTheme = {
@@ -17,6 +18,7 @@ export const darkTheme: DefaultTheme = {
   bgDarkColor: "rgba(0, 0, 0, 0.3)",
   headerColor: "#141323",
   borderColor: "rgb(219, 219, 219)",
+  btnColor: "#00fefe",
 };
 
 export const GlobalStyles = createGlobalStyle`

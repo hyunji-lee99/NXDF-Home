@@ -11,7 +11,7 @@ const Main: React.FC = () => {
         <img
           width='100%'
           height='100%'
-          src={`${process.env.PUBLIC_URL}/image/main/main_image.png`}
+          src={`${process.env.PUBLIC_URL}/image/home/main_image.png`}
         />
       </MainImage>
       <MainDesLayout>
@@ -19,10 +19,10 @@ const Main: React.FC = () => {
           <ImgBoxTitle>De-Fi Platform</ImgBoxTitle>
           <ImgBox>
             <img
-              src={`${process.env.PUBLIC_URL}/image/main/imgbox/icon-dex.png`}
+              src={`${process.env.PUBLIC_URL}/image/home/imgbox/icon-dex.png`}
             />
             <img
-              src={`${process.env.PUBLIC_URL}/image/main/imgbox/icon-wallet.png`}
+              src={`${process.env.PUBLIC_URL}/image/home/imgbox/icon-wallet.png`}
             />
           </ImgBox>
         </MainImgBox>
@@ -30,13 +30,13 @@ const Main: React.FC = () => {
           <ImgBoxTitle>Blockchain Infrastructure</ImgBoxTitle>
           <CenterImgBox>
             <img
-              src={`${process.env.PUBLIC_URL}/image/main/imgbox/icon-chain01.png`}
+              src={`${process.env.PUBLIC_URL}/image/home/imgbox/icon-chain01.png`}
             />
             <img
-              src={`${process.env.PUBLIC_URL}/image/main/imgbox/icon-chain02.png`}
+              src={`${process.env.PUBLIC_URL}/image/home/imgbox/icon-chain02.png`}
             />
             <img
-              src={`${process.env.PUBLIC_URL}/image/main/imgbox/icon-chain03.png`}
+              src={`${process.env.PUBLIC_URL}/image/home/imgbox/icon-chain03.png`}
             />
           </CenterImgBox>
         </MainImgBoxCenter>
@@ -44,10 +44,10 @@ const Main: React.FC = () => {
           <ImgBoxTitle>P2E Infrastructure</ImgBoxTitle>
           <ImgBox>
             <img
-              src={`${process.env.PUBLIC_URL}/image/main/imgbox/icon-bridge.png`}
+              src={`${process.env.PUBLIC_URL}/image/home/imgbox/icon-bridge.png`}
             />
             <img
-              src={`${process.env.PUBLIC_URL}/image/main/imgbox/icon-side.png`}
+              src={`${process.env.PUBLIC_URL}/image/home/imgbox/icon-side.png`}
             />
           </ImgBox>
         </MainImgBox>
