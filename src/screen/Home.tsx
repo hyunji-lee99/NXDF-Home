@@ -2,93 +2,61 @@ import styled from "styled-components";
 import Main from "../component/Home/Main";
 import { LinearBg } from "../component/Common/Linear";
 import Content from "../component/Home/Content";
+import { DesLayout, HomeLayout } from "../component/Common/Layout";
+import { DesContent } from "../component/Common/Content";
+import Separator from "../component/Common/Separator";
 
-const HomeLayout = styled.div`
-  margin: 0 auto;
+const RoadmapContent = styled(DesContent)`
+  flex-direction: column;
+`;
+
+const RoadmapGrid = styled.div`
+  display: grid;
   width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 40px 60px;
 `;
 
-const DesLayout = styled.div`
-  width: 100%;
+const RoadmapCard = styled.div`
+  height: 200px;
 `;
 
-const DesContentLightLayout = styled.div`
-  width: 100%;
-  background: ${(props) => props.theme.bgColor};
-`;
-const DesH1 = styled.h1`
-  font-size: 38px;
-  font-weight: bold;
-  margin-bottom: 26px;
-`;
-
-const Despan = styled.span`
-  display: inline-block;
-  font-weight: 500;
-  margin-bottom: 36px;
-`;
-
-const CommonDesDiv = styled.div`
-  width: 44%;
-  max-width: 528px;
-`;
-
-const PegasusDesDiv = styled(CommonDesDiv)`
-  position: relative;
-  top: 5vh;
-  right: 5vh;
-`;
-
-const DesContent = styled.div`
-  width: 62.5%;
+const RoadmapBar = styled.div`
+  background-color: red;
+  padding-bottom: "1rem";
+  border-radius: 10px 10px 0px 0px;
+  height: 30px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin: 0 auto;
+  justify-content: center;
 `;
 
-const DesImg = styled.img`
-  width: 48%;
-  object-fit: contain;
-  position: relative;
-  bottom: 10vh;
-`;
-
-const PegasusImg = styled(DesImg)`
-  bottom: 15vh;
-`;
 function Home() {
   return (
     <HomeLayout>
       <Main />
+      <Content />
       <DesLayout>
-        <Content />
-        <LinearBg right={true} />
-        <DesContentLightLayout>
-          <DesContent>
-            <PegasusImg
-              src={`${process.env.PUBLIC_URL}/image/home/description/pegasus-img.png`}
-            />
-            <PegasusDesDiv>
-              <DesH1>
-                NFT Asset Exchange <br /> on Pegasus Blockchain
-              </DesH1>
-              <Despan>
-                NFTs are not free to move between blockchain mainnets. Not only
-                tokens, but also images and 3D assets must be usable on other
-                blockchains. In addition, there is a need to roll up the
-                existing mainnet through a dedicated sidechain for the current
-                metaverse world. For this reason, the NXDF team proposes a site
-                chain dedicated to the metaverse and P2E games. Like Pegasus
-                traveling through space, it acts as a bridge between the
-                metaverses of the multiverse world, allowing game items made
-                with NFTs to work on other metaverses and blockchains as well.
-                It enables rapid asset transfer as well as user experience as it
-                is. We call it Pegasus Chain’s NFT Asset Bridge.
-              </Despan>
-            </PegasusDesDiv>
-          </DesContent>
-        </DesContentLightLayout>
+        <RoadmapContent>
+          <h1>Road Map</h1>
+          <Separator value={"2022"} />
+          <RoadmapGrid>
+            <RoadmapCard>
+              <RoadmapBar>1Q</RoadmapBar>
+              <div>
+                <li>· Listing NXDF to Dexlab</li>
+                <li>· Listing NXDF to RAYDIUM</li>
+                <li>· Listing NXDF to Aldrin</li>
+                <li>· Launching a NXDF Discord community web app</li>
+              </div>
+            </RoadmapCard>
+            <RoadmapCard></RoadmapCard>
+            <RoadmapCard></RoadmapCard>
+            <RoadmapCard></RoadmapCard>
+          </RoadmapGrid>
+          <Separator value={"2023"} />
+        </RoadmapContent>
       </DesLayout>
     </HomeLayout>
   );

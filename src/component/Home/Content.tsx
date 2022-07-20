@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { LinearBg } from "../Common/Linear";
+import { DesLayout, DesContentLayout } from "../Common/Layout";
+import { DesContent } from "../Common/Content";
 
 const Content: React.FC = () => {
   return (
@@ -100,18 +102,83 @@ const Content: React.FC = () => {
             />
           </DesContent>
         </DesContentLayout>
+        <LinearBg right={true} />
+        <DesContentLightLayout>
+          <DesContent>
+            <PegasusImg
+              src={`${process.env.PUBLIC_URL}/image/home/description/pegasus-img.png`}
+            />
+            <PegasusDesDiv>
+              <DesH1>
+                NFT Asset Exchange <br /> on Pegasus Blockchain
+              </DesH1>
+              <Despan>
+                NFTs are not free to move between blockchain mainnets. Not only
+                tokens, but also images and 3D assets must be usable on other
+                blockchains. In addition, there is a need to roll up the
+                existing mainnet through a dedicated sidechain for the current
+                metaverse world. For this reason, the NXDF team proposes a site
+                chain dedicated to the metaverse and P2E games. Like Pegasus
+                traveling through space, it acts as a bridge between the
+                metaverses of the multiverse world, allowing game items made
+                with NFTs to work on other metaverses and blockchains as well.
+                It enables rapid asset transfer as well as user experience as it
+                is. We call it Pegasus Chain’s NFT Asset Bridge.
+              </Despan>
+            </PegasusDesDiv>
+          </DesContent>
+        </DesContentLightLayout>
+        <LastContentLayout>
+          <LastDesContent>
+            <LastDiv>
+              <LastContentdiv>
+                <DesH1>
+                  The beginning <br /> of the first-person view Metaverse
+                </DesH1>
+                <Despan>
+                  The term “metaverse” originated in the 1992 science fiction
+                  novel Snow Crash as a portmanteau of “meta” and “universe.”
+                  Meta-Axel expands our universe to multiple realities in the
+                  multiple universes according to the informational Cosmology.
+                  As if you experience the reality with your bare eyes,
+                  Meta-Axel offers users virtual reality in the first-person
+                  view. Users can easily access to the metaverse with a mobile
+                  phone and enjoy many different programs such as hunting
+                  monsters, collecting treasures, killing enemies, dating,
+                  meeting, having a pool party etc.
+                </Despan>
+                <LastReadMore>Read more</LastReadMore>
+                <div>
+                  <ImgIconSm
+                    src={`${process.env.PUBLIC_URL}/image/common/icon-discode.png`}
+                  />
+                  <ImgIconSm
+                    src={`${process.env.PUBLIC_URL}/image/common/icon-telegram.png`}
+                  />
+                  <ImgIconSm
+                    src={`${process.env.PUBLIC_URL}/image/common/icon-medium.png`}
+                  />
+                </div>
+              </LastContentdiv>
+            </LastDiv>
+            <Lastimg
+              src={`${process.env.PUBLIC_URL}/image/home/description/sec06-img.png`}
+            />
+            <LastBox>
+              <Metaaxel
+                src={`${process.env.PUBLIC_URL}/image/home/description/meta-axel.png`}
+              />
+            </LastBox>
+          </LastDesContent>
+        </LastContentLayout>
       </DesLayout>
     </>
   );
 };
 
-const DesLayout = styled.div`
-  width: 100%;
-`;
-
-const DesContentLayout = styled.div`
-  width: 100%;
-  background: ${(props) => props.theme.bgDarkColor};
+const LastBox = styled.div`
+  height: auto;
+  position: relative;
 `;
 
 const DesContentLightLayout = styled(DesContentLayout)`
@@ -119,12 +186,14 @@ const DesContentLightLayout = styled(DesContentLayout)`
   background: ${(props) => props.theme.bgColor};
 `;
 
-const DesContent = styled.div`
-  width: 62.5%;
+const LastContentLayout = styled(DesContentLayout)`
+  margin: 5rem 0;
+`;
+
+const LastDesContent = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin: 0 auto;
+  justify-content: flex-end;
 `;
 
 const CommonDesDiv = styled.div`
@@ -153,6 +222,12 @@ const MetavserseDiv = styled(CommonDesDiv)`
   top: 5vh;
 `;
 
+const PegasusDesDiv = styled(CommonDesDiv)`
+  position: relative;
+  top: 5vh;
+  right: 5vh;
+`;
+
 const DesH1 = styled.h1`
   font-size: 38px;
   font-weight: bold;
@@ -163,6 +238,22 @@ const Despan = styled.span`
   display: inline-block;
   font-weight: 500;
   margin-bottom: 36px;
+  line-height: 24px;
+`;
+
+const LastDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+const Lastimg = styled.img``;
+
+const LastContentdiv = styled.div`
+  width: 60%;
+  align-items: center;
+  justify-content: center;
 `;
 
 const DesImgDiv = styled.div`
@@ -185,6 +276,10 @@ const DesImg = styled.img`
   bottom: 10vh;
 `;
 
+const PegasusImg = styled(DesImg)`
+  bottom: 15vh;
+`;
+
 const Imgbtn = styled.button`
   width: 200px;
   height: 56px;
@@ -203,8 +298,31 @@ const ImgIcon = styled.img`
   margin-right: 15px;
 `;
 
+const ImgIconSm = styled(ImgIcon)`
+  width: 40px;
+  height: 40px;
+  margin-right: 18px;
+`;
+
+const LastReadMore = styled.span`
+  margin-bottom: 2rem;
+  font-size: 21px;
+  color: ${(props) => props.theme.btnColor};
+  font-weight: bold;
+  display: inline-block;
+`;
+
 const SentenceP = styled.p`
   margin-top: 18px;
+`;
+
+const Metaaxel = styled.img`
+  width: 10vh;
+  object-fit: contain;
+  position: absolute;
+  z-index: 1;
+  right: 80vh;
+  bottom: 10vh;
 `;
 
 export default Content;

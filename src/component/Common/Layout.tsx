@@ -23,4 +23,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
+export const DesLayout = styled.div`
+  width: 100%;
+  background: ${(props) => props.theme.bgColor};
+`;
+
+export const DesContentLayout = styled.div`
+  width: 100%;
+  background: ${(props) => props.theme.bgDarkColor};
+`;
+
+export const HomeLayout = styled.div`
+  margin: 0 auto;
+  width: 100%;
+`;
 export default Layout;
