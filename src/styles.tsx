@@ -9,6 +9,7 @@ export const lightTheme: DefaultTheme = {
   bgDarkColor: "rgba(0, 0, 0, 0.3)",
   borderColor: "rgb(219, 219, 219)",
   btnColor: "#00fefe",
+  CardColor: "#12123B",
 };
 
 export const darkTheme: DefaultTheme = {
@@ -19,6 +20,7 @@ export const darkTheme: DefaultTheme = {
   headerColor: "#141323",
   borderColor: "rgb(219, 219, 219)",
   btnColor: "#00fefe",
+  CardColor: "#12123B",
 };
 
 export const GlobalStyles = createGlobalStyle`
