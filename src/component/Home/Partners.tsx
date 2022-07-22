@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { DesContent } from "../Common/Content";
 import { TitleH1 } from "../Common/Title";
 import { DesContentLayout, DesLayout } from "../Common/Layout";
 import { Bzpartner, Devpartner } from "../../Data/PartnersData";
 import PartnerPlate from "./Partners/PartnersPlate";
+import { DesContent } from "../Common/Elements";
 
 function Partners() {
   return (

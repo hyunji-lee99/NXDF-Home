@@ -1,176 +1,26 @@
 import styled from "styled-components";
 import { LinearBg } from "../Common/Linear";
 import { DesLayout, DesContentLayout } from "../Common/Layout";
-import { DesContent } from "../Common/Content";
+
+import Contentp2e from "./Contents/ContentP2e";
+import ContentMeet from "./Contents/ContentMeet";
+import ContentPegasus from "./Contents/ContentPegasus";
+import ContentLast from "./Contents/ContentLast";
+import ContentMetaverse from "./Contents/ContentMetaverse";
 
 const Content: React.FC = () => {
   return (
     <>
       <DesLayout>
         <LinearBg />
-        <DesContentLayout>
-          <DesContent>
-            <P2EDiv>
-              <DesH1>
-                Accelerate
-                <br /> User Experience of P2E
-              </DesH1>
-              <Despan>
-                The user’s P2E (Play To Earn) experience is the key feature in
-                the NXDF ecosystem. In order to offer a proper P2E environment,
-                it should start with a decentralized financial service that is
-                close to the user’s hand. For this purpose, NXDF has developed a
-                mobile wallet and based on it, provides users with a much more
-                sophisticated decentralized financial service experience. This
-                mobile wallet can store or monetize the assets of the game or
-                metaverse that the user has signed up for, even if the user does
-                not have access to the game or metaverse. Of course, you can
-                also use a mobile wallet integrated with the game by using a
-                plugin or SDK. If you would like to know more about this, please
-                contact our development team.
-              </Despan>
-              <div>
-                <ImgIcon
-                  src={`${process.env.PUBLIC_URL}/image/common/icon-discode.png`}
-                />
-                <ImgIcon
-                  src={`${process.env.PUBLIC_URL}/image/common/icon-telegram.png`}
-                />
-              </div>
-            </P2EDiv>
-            <DesImgDiv>
-              <img
-                src={`${process.env.PUBLIC_URL}/image/home/description/sec02-image.png`}
-              />
-            </DesImgDiv>
-          </DesContent>
-        </DesContentLayout>
+        <Contentp2e />
         <LinearBg right={true} reverse={true} />
-        <DesContentLightLayout>
-          <DesContent>
-            <DesImg
-              src={`${process.env.PUBLIC_URL}/image/home/description/sec03-img.png`}
-            />
-            <NXDFmeetDiv>
-              <DesH1>
-                NXDF Meet,
-                <br /> the entrance of the metaverse <br /> environment
-              </DesH1>
-              <Despan>
-                During the COVID period, it has become more common for <br />{" "}
-                many people to do their work and leisure activities on the{" "}
-                <br /> Internet. Through voice chat, while looking at each
-                other’s <br />
-                faces, we are able to perform activities that are more realistic{" "}
-                <br />
-                than before. Not only conferences but also presentations, social{" "}
-                <br />
-                parties, dating, shopping, gaming and more can be easily held{" "}
-                <br /> online. <SentenceP></SentenceP> You can use the video
-                conferencing service just by depositing <br /> NXDF or GNXD in
-                your wallet. NXDF-Meet You can be with your <br /> friends in
-                real-time no matter which metaverse you are <br /> connected to.
-                NXDF-Meet We open source and API to become <br /> a service for
-                all metaverses around the world, not just for the <br /> NXDF
-                ecosystem.
-              </Despan>
-              <Imgbtn>Start Meeting</Imgbtn>
-            </NXDFmeetDiv>
-          </DesContent>
-        </DesContentLightLayout>
+        <ContentMeet />
         <LinearBg right={false} reverse={true} />
-        <DesContentLayout>
-          <DesContent>
-            <MetavserseDiv>
-              <DesH1>A DEX for P2E & Metaverse</DesH1>
-              <Despan>
-                Game items such as weapons, clothes, and shoes should be easily
-                exchangeable in the game itself. NFT assets such as land,
-                houses, and paintings should also be easily exchangeable on the
-                metaverse. To this end, we support a decentralized exchange
-                exclusively for games and metaverses in the NXDF ecosystems.
-                NXDF’s infrastructure makes it easy for anyone to buy and sell
-                in-game tokens and items at any desired price. In addition, NXDF
-                DAO directly supports promising NFT and P2E projects for the
-                expansion of a healthy De-Fi ecosystem. LuciDEX has newly joined
-                the NXDF ecosystem to take charge of the decentralized exchange
-                technology of the NXDF mobile environment.
-              </Despan>
-            </MetavserseDiv>
-            <DesImg
-              src={`${process.env.PUBLIC_URL}/image/home/description/sec04-img.png`}
-            />
-          </DesContent>
-        </DesContentLayout>
+        <ContentMetaverse />
         <LinearBg right={true} />
-        <DesContentLightLayout>
-          <DesContent>
-            <PegasusImg
-              src={`${process.env.PUBLIC_URL}/image/home/description/pegasus-img.png`}
-            />
-            <PegasusDesDiv>
-              <DesH1>
-                NFT Asset Exchange <br /> on Pegasus Blockchain
-              </DesH1>
-              <Despan>
-                NFTs are not free to move between blockchain mainnets. Not only
-                tokens, but also images and 3D assets must be usable on other
-                blockchains. In addition, there is a need to roll up the
-                existing mainnet through a dedicated sidechain for the current
-                metaverse world. For this reason, the NXDF team proposes a site
-                chain dedicated to the metaverse and P2E games. Like Pegasus
-                traveling through space, it acts as a bridge between the
-                metaverses of the multiverse world, allowing game items made
-                with NFTs to work on other metaverses and blockchains as well.
-                It enables rapid asset transfer as well as user experience as it
-                is. We call it Pegasus Chain’s NFT Asset Bridge.
-              </Despan>
-            </PegasusDesDiv>
-          </DesContent>
-        </DesContentLightLayout>
-        <LastContentLayout>
-          <LastDesContent>
-            <LastDiv>
-              <LastContentdiv>
-                <DesH1>
-                  The beginning <br /> of the first-person view Metaverse
-                </DesH1>
-                <Despan>
-                  The term “metaverse” originated in the 1992 science fiction
-                  novel Snow Crash as a portmanteau of “meta” and “universe.”
-                  Meta-Axel expands our universe to multiple realities in the
-                  multiple universes according to the informational Cosmology.
-                  As if you experience the reality with your bare eyes,
-                  Meta-Axel offers users virtual reality in the first-person
-                  view. Users can easily access to the metaverse with a mobile
-                  phone and enjoy many different programs such as hunting
-                  monsters, collecting treasures, killing enemies, dating,
-                  meeting, having a pool party etc.
-                </Despan>
-                <LastReadMore>Read more</LastReadMore>
-                <div>
-                  <ImgIconSm
-                    src={`${process.env.PUBLIC_URL}/image/common/icon-discode.png`}
-                  />
-                  <ImgIconSm
-                    src={`${process.env.PUBLIC_URL}/image/common/icon-telegram.png`}
-                  />
-                  <ImgIconSm
-                    src={`${process.env.PUBLIC_URL}/image/common/icon-medium.png`}
-                  />
-                </div>
-              </LastContentdiv>
-            </LastDiv>
-            <Lastimg
-              src={`${process.env.PUBLIC_URL}/image/home/description/sec06-img.png`}
-            />
-            <LastBox>
-              <Metaaxel
-                src={`${process.env.PUBLIC_URL}/image/home/description/meta-axel.png`}
-              />
-            </LastBox>
-          </LastDesContent>
-        </LastContentLayout>
+        <ContentPegasus />
+        <ContentLast />
       </DesLayout>
     </>
   );

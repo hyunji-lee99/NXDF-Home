@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DesContent } from "../Common/Content";
+import { DesContent } from "../Common/Elements";
 import { DesLayout } from "../Common/Layout";
 import Separator from "../Common/Separator";
 import { TitleH1 } from "../Common/Title";

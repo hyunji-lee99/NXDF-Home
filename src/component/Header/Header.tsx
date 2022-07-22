@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { useRecoilState } from "recoil";
+import { LangState } from "../../atoms";
+import { selectLang } from "../../lib/selectLang";
 
 const SHeader = styled.header`
   width: 100%;
@@ -8,6 +11,9 @@ const SHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 `;
 
 const HeaderLayout = styled.div`
@@ -36,28 +42,53 @@ const Nav = styled.ul`
   font-weight: bold;
 `;
 
-const Column = styled.div``;
-
-const Icon = styled.span`
-  margin-left: 15px;
-`;
-
-const Button = styled.span`
-  background-color: ${(props) => props.theme.accent};
-  border-radius: 4px;
-  padding: 4px 15px;
-  color: white;
-  font-weight: 600;
-`;
-
-const IconsContainer = styled.div`
+const Button = styled.div`
+  width: 140px;
+  height: 80px;
+  padding: 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  span {
+    line-height: 1.11;
+    letter-spacing: -0.54px;
+    text-align: left;
+    font-weight: bold;
+  }
+`;
+
+const LangContainer = styled.div`
+  height: 0px;
+  width: 0px;
+`;
+
+const LangBox = styled.div`
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`;
+
+const HeaderContainer = styled.div`
+  width: 18.75%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;
 
 function Header() {
+  const [Lang, setLang] = useRecoilState(LangState);
+  const { HeaderLang } = selectLang(Lang);
+  const ChangeLang = () => {
+    setLang((prev) => !prev);
+  };
+
   return (
     <SHeader>
+      <HeaderContainer></HeaderContainer>
       <HeaderLayout>
         <Wrapper>
           <img
@@ -67,15 +98,23 @@ function Header() {
           />
         </Wrapper>
         <Nav>
-          <li>NXDF Ecosystems</li>
-          <li>White Paper</li>
-          <li>Team</li>
-          <li>GitHub</li>
-          <li>Article</li>
-          <li>DEX</li>
-          <li>MetaAxel</li>
+          <li>{HeaderLang[0]}</li>
+          <li>{HeaderLang[1]}</li>
+          <li>{HeaderLang[2]}</li>
+          <li>{HeaderLang[3]}</li>
+          <li>{HeaderLang[4]}</li>
+          <li>{HeaderLang[5]}</li>
+          <li>{HeaderLang[6]}</li>
         </Nav>
       </HeaderLayout>
+      <HeaderContainer>
+        <Button onClick={ChangeLang}>
+          <span>{Lang ? "English" : "한국어"}</span>
+          <img
+            src={`${process.env.PUBLIC_URL}/image/common/nav-select-down.png`}
+          />
+        </Button>
+      </HeaderContainer>
     </SHeader>
   );
 }

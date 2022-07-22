@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { DesContent } from "../Common/Content";
 import { CompanyLayout } from "../Common/Layout";
 import { TitleH1 } from "../Common/Title";
 import { Companies } from "../../Data/CompanyData";
+import { DesContent } from "../Common/Elements";
 
 const Company: React.FC = () => {
   return (

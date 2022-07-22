@@ -7,8 +7,12 @@ declare module "styled-components" {
     fontColor: string;
     headerColor: string;
     btnColor: string;
+
     accent?: string;
     borderColor?: string;
     CardColor?: string;
+
+    maxWidth: string;
+    maxContentWidth: string;
   }
 }

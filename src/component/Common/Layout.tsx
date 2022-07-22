@@ -8,7 +8,7 @@ type LayoutProps = {
 
 const Content = styled.main`
   margin: 0 auto;
-  margin-top: 45px;
+  margin-top: 120px;
   max-width: 1920px;
   width: 100%;
 `;

@@ -2,25 +2,35 @@ import { createGlobalStyle, DefaultTheme } from "styled-components";
 import reset from "styled-reset";
 
 export const lightTheme: DefaultTheme = {
-  accent: "red",
+  //essentail
   headerColor: "#141323",
   bgColor: "#FAFAFA",
   fontColor: "rgb(38, 38, 38)",
   bgDarkColor: "rgba(0, 0, 0, 0.3)",
-  borderColor: "rgb(219, 219, 219)",
   btnColor: "#00fefe",
+  // none essentail
+  accent: "red",
+  borderColor: "rgb(219, 219, 219)",
   CardColor: "#12123B",
+  //width
+  maxWidth: "1200px",
+  maxContentWidth: "600px",
 };
 
 export const darkTheme: DefaultTheme = {
+  // none essential
   accent: "red",
+  borderColor: "rgb(219, 219, 219)",
+  CardColor: "#12123B",
+  //essential
   fontColor: "white",
   bgColor: "#03032f",
   bgDarkColor: "rgba(0, 0, 0, 0.3)",
   headerColor: "#141323",
-  borderColor: "rgb(219, 219, 219)",
   btnColor: "#00fefe",
-  CardColor: "#12123B",
+  //width
+  maxWidth: "1200px",
+  maxContentWidth: "600px",
 };
 
 export const GlobalStyles = createGlobalStyle`
@@ -41,4 +51,12 @@ export const GlobalStyles = createGlobalStyle`
       text-decoration: none;
       color:inherit;
     }
+    div
+      {
+        -ms-user-select: none; 
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
 `;
