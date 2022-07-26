@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useRecoilState } from "recoil";
 import { selectLang } from "../../lib/selectLang";
 import { LangState } from "../../atoms";
+import media from "../../lib/media";
 
 const Main: React.FC = () => {
   const [Lang, setLang] = useRecoilState(LangState);
@@ -64,6 +65,10 @@ const MainLayout = styled.div`
   margin: 0 auto;
   padding-top: 2rem;
   width: 62.5%;
+  ${media.small} {
+    width: 80%;
+    flex-direction: column;
+  }
 `;
 
 const MainTitle = styled.h1`
@@ -85,18 +90,60 @@ const MainDesLayout = styled.div`
   max-width: ${(props) => props.theme.maxWidth};
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  ${media.small} {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  div:nth-child(1) {
+    ${media.small} {
+      width: 100%;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+  div:nth-child(3) {
+    order: 3;
+    ${media.small} {
+      width: 100%;
+      order: 2;
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
 `;
 
 const MainImgBox = styled.div`
   width: 30%;
   max-width: 320px;
   border-radius: 20px;
+  ${media.small} {
+    order: 3;
+  }
 `;
 
 const MainImgBoxCenter = styled(MainImgBox)`
-  width: 40%;
-  margin: 0px 3rem;
   max-width: 485px;
+  width: 40%;
+  order: 2;
+  margin: 0 auto;
+  ${media.small} {
+    max-width: 800px;
+    width: 100%;
+    order: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 `;
 
 const ImgBoxTitle = styled.span`
@@ -127,7 +174,6 @@ const ImgBox = styled.div`
 
 const CenterImgBox = styled(ImgBox)`
   img {
-    width: 33%;
     margin: 1px 10px;
   }
 `;

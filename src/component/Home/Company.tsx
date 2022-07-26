@@ -3,6 +3,7 @@ import { CompanyLayout } from "../Common/Layout";
 import { TitleH1 } from "../Common/Title";
 import { Companies } from "../../Data/CompanyData";
 import { DesContent } from "../Common/Elements";
+import media from "../../lib/media";
 
 const Company: React.FC = () => {
   return (
@@ -31,7 +32,6 @@ const CompanyContentLayout = styled(DesContent)`
 
 const CompanyGrid = styled.div`
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(4, 1fr);
   min-height: 200px;
   justify-content: space-between;
@@ -45,5 +45,9 @@ const CompanyImg = styled.div<{ img?: string }>`
   background-position: center;
   width: 200px;
   height: 100px;
+  ${media.small} {
+    width: auto;
+    height: auto;
+  }
 `;
 export default Company;

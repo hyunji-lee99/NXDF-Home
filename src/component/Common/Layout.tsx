@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../lib/media";
 import Footer from "../Footer/Header";
 import Header from "../Header/Header";
 

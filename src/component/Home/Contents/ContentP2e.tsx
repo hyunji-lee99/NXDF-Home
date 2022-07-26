@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../../lib/media";
 import {
   CommonDesDiv,
   DesH1,
@@ -54,6 +55,9 @@ const P2EDiv = styled(CommonDesDiv)`
   margin: 26px 48.4px 36px 0;
   position: relative;
   bottom: 20vh;
+  ${media.small} {
+    position: static;
+  }
 `;
 
 const DesImgDiv = styled.div`
@@ -66,6 +70,19 @@ const DesImgDiv = styled.div`
     top: 22vh;
     left: 50%;
     object-fit: contain;
+  }
+
+  ${media.small} {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 80vw;
+      height: 100%;
+      position: relative;
+      left: 0;
+      top: 15vh;
+      object-fit: contain;
+    }
   }
 `;
 

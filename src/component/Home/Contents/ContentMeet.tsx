@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../../lib/media";
 import {
   CommonDesDiv,
   DesH1,
@@ -67,6 +68,11 @@ const NXDFmeetDiv = styled(CommonDesDiv)`
   margin: 20px 9px 20px 71px;
   position: relative;
   top: 10vh;
+  ${media.small} {
+    margin: 20px 0px;
+    position: static;
+    width: 100%;
+  }
 `;
 
 export default ContentMeet;

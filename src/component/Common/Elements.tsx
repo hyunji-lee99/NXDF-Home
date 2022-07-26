@@ -1,5 +1,5 @@
-import { prototype } from "events";
 import styled from "styled-components";
+import media from "../../lib/media";
 
 export const DesH1 = styled.h1`
   font-size: 38px;
@@ -18,6 +18,10 @@ export const CommonDesDiv = styled.div`
   z-index: 10;
   width: 50%;
   max-width: ${(props) => props.theme.maxContentWidth};
+  ${media.small} {
+    margin-top: 5rem;
+    width: auto;
+  }
 `;
 
 export const DesContent = styled.div`
@@ -26,6 +30,10 @@ export const DesContent = styled.div`
   align-items: center;
   justify-content: flex-start;
   margin: 0 auto;
+  ${media.small} {
+    width: 80%;
+    flex-direction: column;
+  }
 `;
 
 //img
@@ -35,6 +43,10 @@ export const DesImg = styled.img`
   object-fit: contain;
   position: relative;
   bottom: 10vh;
+  ${media.small} {
+    position: static;
+    width: 100%;
+  }
 `;
 
 export const ImgIcon = styled.img`

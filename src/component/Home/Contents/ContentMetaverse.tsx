@@ -4,15 +4,14 @@ import {
   DesH1,
   DesImg,
   Despan,
-  ImgIcon,
   DesContent,
 } from "../../Common/Elements";
-import { DesLayout, DesContentLayout } from "../../Common/Layout";
+import { DesContentLayout } from "../../Common/Layout";
 
 const ContentMetaverse: React.FC = () => {
   return (
     <DesContentLayout>
-      <DesContent>
+      <MetaverseContent>
         <MetavserseDiv>
           <DesH1>A DEX for P2E & Metaverse</DesH1>
           <Despan>
@@ -31,7 +30,7 @@ const ContentMetaverse: React.FC = () => {
         <DesImg
           src={`${process.env.PUBLIC_URL}/image/home/description/sec04-img.png`}
         />
-      </DesContent>
+      </MetaverseContent>
     </DesContentLayout>
   );
 };
@@ -42,5 +41,7 @@ const MetavserseDiv = styled(CommonDesDiv)`
   position: relative;
   top: 5vh;
 `;
+
+const MetaverseContent = styled(DesContent)``;
 
 export default ContentMetaverse;
