@@ -4,6 +4,7 @@ import { DesContentLayout, DesLayout } from "../Common/Layout";
 import { Bzpartner, Devpartner } from "../../Data/PartnersData";
 import PartnerPlate from "./Partners/PartnersPlate";
 import { DesContent } from "../Common/Elements";
+import media from "../../lib/media";
 
 function Partners() {
   return (
@@ -40,10 +41,17 @@ const PartnerGrid = styled.div`
   display: grid;
   width: 100%;
   grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
   min-height: 400px;
   justify-content: space-between;
   gap: 1rem 2rem;
   margin-bottom: 5rem;
+  ${media.small} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  ${media.phone} {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const PartnerTitle = styled(TitleH1)`

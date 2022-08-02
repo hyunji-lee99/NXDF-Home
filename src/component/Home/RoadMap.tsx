@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../lib/media";
 import { DesContent } from "../Common/Elements";
 import { DesLayout } from "../Common/Layout";
 import Separator from "../Common/Separator";
@@ -105,10 +106,16 @@ const RoadmapGrid = styled.div`
   justify-content: space-between;
   gap: 4rem;
   margin-bottom: 5rem;
+  ${media.small} {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const RoadmapCard = styled.div`
   height: 200px;
+  ${media.small} {
+    height: auto;
+  }
 `;
 
 const RoadmapBar = styled.div`
@@ -119,6 +126,7 @@ const RoadmapBar = styled.div`
   justify-content: flex-start;
   background-image: url("/image/home/roadmap/roadmap-bar.png");
   object-fit: contain;
+  background-repeat: no-repeat;
 `;
 
 const RoadMapBarDes = styled.div`

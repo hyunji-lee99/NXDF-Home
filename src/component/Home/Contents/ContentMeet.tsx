@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import media from "../../../lib/media";
+import { useHistory } from "react-router-dom";
 import {
   CommonDesDiv,
   DesH1,
@@ -11,6 +12,9 @@ import {
 import { DesLayout } from "../../Common/Layout";
 
 const ContentMeet: React.FC = () => {
+  const onClick = () => {
+    window.location.assign("https://meet.nxdf.io");
+  };
   return (
     <DesLayout>
       <DesContent>
@@ -38,7 +42,7 @@ const ContentMeet: React.FC = () => {
             source and API to become <br /> a service for all metaverses around
             the world, not just for the <br /> NXDF ecosystem.
           </Despan>
-          <Imgbtn>Start Meeting</Imgbtn>
+          <Imgbtn onClick={onClick}>Start Meeting</Imgbtn>
         </NXDFmeetDiv>
       </DesContent>
     </DesLayout>

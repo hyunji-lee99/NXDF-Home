@@ -1,65 +1,59 @@
 export const Companies = [
   {
-    img: "/image/company/partner01.png",
+    img: "/image/company/aldrin.png",
   },
   {
-    img: "/image/company/partner02.png",
+    img: "/image/company/bnbit.png",
   },
   {
-    img: "/image/company/partner03.png",
+    img: "/image/company/daegu.png",
   },
   {
-    img: "/image/company/partner04.png",
+    img: "/image/company/daib_logo.png",
   },
   {
-    img: "/image/company/partner05.png",
+    img: "/image/company/Dope.png",
   },
   {
-    img: "/image/company/partner06.png",
+    img: "/image/company/edensol.jpeg",
   },
   {
-    img: "/image/company/partner07.png",
+    img: "/image/company/epik_full.jpeg",
   },
   {
-    img: "/image/company/partner08.png",
+    img: "/image/company/everland.jpeg",
   },
   {
-    img: "",
+    img: "/image/company/fame.png",
   },
   {
-    img: "/image/company/partner10.png",
+    img: "/image/company/fluidity.png",
   },
   {
-    img: "/image/company/partner11.png",
+    img: "/image/company/fsn.jpeg",
   },
   {
-    img: "",
+    img: "/image/company/jobplanet.jpeg",
   },
   {
-    img: "",
+    img: "/image/company/mkyu.png",
   },
   {
-    img: "",
+    img: "/image/company/sbs.jpeg",
   },
   {
-    img: "",
+    img: "/image/company/solsea.jpeg",
   },
   {
-    img: "",
+    img: "/image/company/spoqa.png",
   },
   {
-    img: "",
+    img: "/image/company/stream.png",
   },
   {
-    img: "/image/company/partner18.png",
+    img: "/image/company/vers_logo.png",
   },
   {
-    img: "/image/company/partner19.png",
-  },
-  {
-    img: "/image/company/partner20.png",
-  },
-  {
-    img: "/image/company/partner21.png",
+    img: "/image/company/zebec_logo.png",
   },
 ];

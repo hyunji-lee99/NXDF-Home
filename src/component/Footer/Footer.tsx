@@ -12,18 +12,26 @@ function Footer() {
           />
         </Wrapper>
         <Nav>
-          <ImgIcon
-            src={`${process.env.PUBLIC_URL}/image/common/icon-discode.png`}
-          />
-          <ImgIcon
-            src={`${process.env.PUBLIC_URL}/image/common/icon-reddit.png`}
-          />
-          <ImgIcon
-            src={`${process.env.PUBLIC_URL}/image/common/icon-twitter.png`}
-          />
-          <ImgIcon
-            src={`${process.env.PUBLIC_URL}/image/common/icon-telegram.png`}
-          />
+          <a href='https://discord.gg/UxAYWbkXyS'>
+            <ImgIcon
+              src={`${process.env.PUBLIC_URL}/image/common/icon-discode.png`}
+            />
+          </a>
+          <a href='https://www.reddit.com/r/next_defi_protocol/'>
+            <ImgIcon
+              src={`${process.env.PUBLIC_URL}/image/common/icon-reddit.png`}
+            />
+          </a>
+          <a href='https://twitter.com/nxdf16'>
+            <ImgIcon
+              src={`${process.env.PUBLIC_URL}/image/common/icon-twitter.png`}
+            />
+          </a>
+          <a href='https://t.me/nxdfarmy'>
+            <ImgIcon
+              src={`${process.env.PUBLIC_URL}/image/common/icon-telegram.png`}
+            />
+          </a>
         </Nav>
       </FooterLayout>
     </FooterL>

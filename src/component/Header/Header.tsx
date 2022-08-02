@@ -82,9 +82,9 @@ const HeaderContainer = styled.div`
 function Header() {
   const [Lang, setLang] = useRecoilState(LangState);
   const { HeaderLang } = selectLang(Lang);
-  const ChangeLang = () => {
-    setLang((prev) => !prev);
-  };
+  // const ChangeLang = () => {
+  //   setLang((prev) => !prev);
+  // };
 
   return (
     <SHeader>
@@ -98,17 +98,31 @@ function Header() {
           />
         </Wrapper>
         <Nav>
-          <li>{HeaderLang[0]}</li>
-          <li>{HeaderLang[1]}</li>
-          <li>{HeaderLang[2]}</li>
-          <li>{HeaderLang[3]}</li>
-          <li>{HeaderLang[4]}</li>
-          <li>{HeaderLang[5]}</li>
-          <li>{HeaderLang[6]}</li>
+          <a href='#'>
+            <li>{HeaderLang[0]}</li>
+          </a>
+          <a href=' https://docs.google.com/document/d/1GxDwnL90k_kOBrEfe_RVfXp1lincXCR5Gt6JCfwyFoc/edit?usp=sharing'>
+            <li>{HeaderLang[1]}</li>
+          </a>
+          <a href='#'>
+            <li>{HeaderLang[2]}</li>
+          </a>
+          <a href='https://github.com/DAIOSFoundation'>
+            <li>{HeaderLang[3]}</li>
+          </a>
+          <a href='https://medium.com/@NXDF'>
+            <li>{HeaderLang[4]}</li>
+          </a>
+          <a href='#'>
+            <li>{HeaderLang[5]}</li>
+          </a>
+          <a href='https://metaaxel.online'>
+            <li>{HeaderLang[6]}</li>
+          </a>
         </Nav>
       </HeaderLayout>
       <HeaderContainer>
-        <Button onClick={ChangeLang}>
+        <Button>
           <span>{Lang ? "English" : "한국어"}</span>
           <img
             src={`${process.env.PUBLIC_URL}/image/common/nav-select-down.png`}

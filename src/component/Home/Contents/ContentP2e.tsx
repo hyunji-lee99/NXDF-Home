@@ -33,12 +33,16 @@ const Contentp2e: React.FC = () => {
             development team.
           </Despan>
           <div>
-            <ImgIcon
-              src={`${process.env.PUBLIC_URL}/image/common/icon-discode.png`}
-            />
-            <ImgIcon
-              src={`${process.env.PUBLIC_URL}/image/common/icon-telegram.png`}
-            />
+            <a href='https://discord.gg/UxAYWbkXyS'>
+              <ImgIcon
+                src={`${process.env.PUBLIC_URL}/image/common/icon-discode.png`}
+              />
+            </a>
+            <a href='https://twitter.com/nxdf16'>
+              <ImgIcon
+                src={`${process.env.PUBLIC_URL}/image/common/icon-telegram.png`}
+              />
+            </a>
           </div>
         </P2EDiv>
         <DesImgDiv>
@@ -68,7 +72,7 @@ const DesImgDiv = styled.div`
     height: 100%;
     position: relative;
     top: 22vh;
-    left: 50%;
+    left: 30%;
     object-fit: contain;
   }
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import media from "../../lib/media";
-import Footer from "../Footer/Header";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
 type LayoutProps = {

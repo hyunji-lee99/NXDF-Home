@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../../lib/media";
 import {
   CommonDesDiv,
   DesH1,
@@ -30,15 +31,21 @@ const ContentLast: React.FC = () => {
           </Despan>
           <LastReadMore>Read more</LastReadMore>
           <div>
-            <ImgIconSm
-              src={`${process.env.PUBLIC_URL}/image/common/icon-discode.png`}
-            />
-            <ImgIconSm
-              src={`${process.env.PUBLIC_URL}/image/common/icon-telegram.png`}
-            />
-            <ImgIconSm
-              src={`${process.env.PUBLIC_URL}/image/common/icon-medium.png`}
-            />
+            <a href='https://discord.gg/UxAYWbkXyS'>
+              <ImgIconSm
+                src={`${process.env.PUBLIC_URL}/image/common/icon-discode.png`}
+              />
+            </a>
+            <a href='https://t.me/nxdfarmy'>
+              <ImgIconSm
+                src={`${process.env.PUBLIC_URL}/image/common/icon-telegram.png`}
+              />
+            </a>
+            <a href='https://medium.com/@METAAXEL'>
+              <ImgIconSm
+                src={`${process.env.PUBLIC_URL}/image/common/icon-medium.png`}
+              />
+            </a>
           </div>
         </LastContentdiv>
         <LastBox>
@@ -56,6 +63,11 @@ const LastContentLayout = styled(DesContentLayout)`
   background-image: url("/image/home/description/sec06-img.png");
   background-repeat: no-repeat;
   background-position: right;
+  ${media.small} {
+    background-image: url("/image/home/description/sec06-img.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
 `;
 
 const LastDesContent = styled(DesContent)`
@@ -63,12 +75,21 @@ const LastDesContent = styled(DesContent)`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${media.small} {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  }
 `;
 
 const LastContentdiv = styled(CommonDesDiv)`
   width: 60%;
   align-items: center;
   justify-content: center;
+  ${media.small} {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const LastReadMore = styled.span`
@@ -84,6 +105,13 @@ const LastBox = styled.div`
   height: auto;
   position: relative;
   display: flex;
+  ${media.small} {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
 `;
 
 const Metaaxel = styled.img`
@@ -93,5 +121,11 @@ const Metaaxel = styled.img`
   z-index: 1;
   left: 5vh;
   bottom: 5vh;
+  ${media.small} {
+    position: absolute;
+    width: auto;
+    left: 60%;
+    bottom: 80%;
+  }
 `;
 export default ContentLast;

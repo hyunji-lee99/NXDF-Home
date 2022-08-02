@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../../lib/media";
 import {
   CommonDesDiv,
   DesH1,
@@ -40,8 +41,23 @@ const MetavserseDiv = styled(CommonDesDiv)`
   margin-right: 80px;
   position: relative;
   top: 5vh;
+  ${media.small} {
+    position: static;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 5rem;
+  }
 `;
 
-const MetaverseContent = styled(DesContent)``;
+const MetaverseContent = styled(DesContent)`
+  ${media.small} {
+    div:nth-child(1) {
+      order: 2;
+    }
+    div:nth-child(2) {
+      order: 1;
+    }
+  }
+`;
 
 export default ContentMetaverse;

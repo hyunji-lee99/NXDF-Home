@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../../lib/media";
 
 type PartnersProps = {
   img?: string;
@@ -28,16 +29,23 @@ const PartnerPlateLayout = styled.div`
 const PartnerImg = styled.div<{ img?: string }>`
   width: 100%;
   height: 60%;
+  max-height: 100px;
+  max-width: 100px;
+
   background-image: ${(props) => `url(${props.img})`};
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: contain;
   object-fit: contain;
   margin: 0 23px 30px 23px;
+  ${media.small} {
+    min-height: 100px;
+    min-width: 100px;
+  }
 `;
 
 const PartnerIntro = styled.div`
   width: 100%;
-  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,6 +58,11 @@ const PartnerName = styled.span`
   font-size: 20px;
   line-height: 52px;
   padding: 0.5rem 0px;
+  ${media.phone} {
+    display: inline-block;
+    line-height: 2rem;
+    padding: 0.5rem 0px;
+  }
 `;
 const PartnerPosition = styled.span`
   font-size: 18px;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../../lib/media";
 import {
   CommonDesDiv,
   DesH1,
@@ -42,6 +43,9 @@ const PegasusDesDiv = styled(CommonDesDiv)`
   position: relative;
   top: 5vh;
   right: 5vh;
+  ${media.small} {
+    position: static;
+  }
 `;
 
 const PegasusImg = styled(DesImg)`

@@ -28,26 +28,37 @@ const CompanyTitle = styled(TitleH1)`
 const CompanyContentLayout = styled(DesContent)`
   flex-direction: column;
   padding: 5rem 0px;
+  ${media.small} {
+    width: 80%;
+  }
 `;
 
 const CompanyGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   min-height: 200px;
+  min-width: 100px;
   justify-content: space-between;
   gap: 1rem 2rem;
   margin-bottom: 5rem;
+  ${media.small} {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
 `;
 
 const CompanyImg = styled.div<{ img?: string }>`
   background-image: ${(props) => `url(${props.img})`};
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   width: 200px;
   height: 100px;
   ${media.small} {
     width: auto;
+    min-width: 100px;
     height: auto;
+    min-height: 100px;
   }
 `;
 export default Company;
